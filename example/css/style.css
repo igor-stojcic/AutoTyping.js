@@ -1,0 +1,124 @@
+/*!
+ * Auto Typing
+ * Copyright 2020 Igor Stojcic
+ * Licensed under MIT (https://github.com/-------------------/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+footer i {
+	font-size: 1.2em;
+}
+
+/*tool-tip*/
+.tooltip-inner {
+  background-color: transparent !important;
+  color: #FFF ;
+}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: transparent !important;
+}
+
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: transparent !important;
+}
+
+
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  border-bottom-color: transparent !important;
+}
+
+
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: transparent !important;
+}
+
+.options {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+header {
+	background-color: #04D197;
+	-webkit-transition: background 0.5s ease-in-out;
+-moz-transition: background 0.5s ease-in-out;
+-ms-transition: background 0.5s ease-in-out;
+-o-transition: background 0.5s ease-in-out;
+transition: background 0.5s ease-in-out;
+}
+
+.header-animate0 {
+background-color: #04D197;
+-webkit-transition: background 0.5s ease-in-out;
+-moz-transition: background 0.5s ease-in-out;
+-ms-transition: background 0.5s ease-in-out;
+-o-transition: background 0.5s ease-in-out;
+transition: background 0.5s ease-in-out;
+}
+
+.header-animate1 {
+background-color: #FF7AC4;
+-webkit-transition: background 0.5s linear;
+-moz-transition: background 0.5s linear;
+-ms-transition: background 0.5s linear;
+-o-transition: background 0.5s linear;
+transition: background 0.5s linear;
+}
+
+.header-animate2 {
+background-color: #A17DFF;
+-webkit-transition: background 0.5s ease-in-out;
+-moz-transition: background 0.5s ease-in-out;
+-ms-transition: background 0.5s ease-in-out;
+-o-transition: background 0.5s ease-in-out;
+transition: background 0.5s ease-in-out;
+}
+
+.header-animate3 {
+background-color: #45ABFF;
+-webkit-transition: background 0.5s ease-in-out;
+-moz-transition: background 0.5s ease-in-out;
+-ms-transition: background 0.5s ease-in-out;
+-o-transition: background 0.5s ease-in-out;
+transition: background 0.5s ease-in-out;
+}
+
+.header-animate4 {
+background-color: #FF9680;
+-webkit-transition: background 0.5s ease-in-out;
+-moz-transition: background 0.5s ease-in-out;
+-ms-transition: background 0.5s ease-in-out;
+-o-transition: background 0.5s ease-in-out;
+transition: background 0.5s ease-in-out;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	header {
+  	height: 350px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  header {
+  	height: 400px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  header {
+  	height: 400px;
+  	padding: 0px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+	header {
+  	height: 400px;
+  	padding: 0px !important;
+  }
+  header h1 {
+  	font-size: 2em !important;
+  }
+}
