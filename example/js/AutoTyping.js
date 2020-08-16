@@ -24,7 +24,7 @@
  * Copyright © 2020 Igor Stojcic (https://igor.smarty.rs) | MIT license
  * https://github.com/igor-stojcic/AutoTyping
 */
-
+'use strict';
 function AutoTyping(options) {
   let counter = 0, blinkcursor, counterText = 1, callBack = null, calBackCounter = 0, userCounter = null;
   if (options.textColor == undefined || typeof(options.textColor) != 'string') {

@@ -108,7 +108,61 @@
         
         <div class="options p-3 bg-light">
           <p class="m-0">
-            <span class="text-danger">let</span> myText = <span class="text-warning">new</span> AutoTyping({
+            <span class="text-danger">const</span> myText = <span class="text-warning">new</span> AutoTyping({
+          </p>
+          <p class="m-0">
+           <span class="pl-4">id: 'example', <small><span class="text-success">//Your HTML element id without # (string) - <span class="text-danger">required</span></span></small></span>
+          </p>
+          <p class="m-0">
+           <span class="pl-4">typeText: ['words','sentences'] <small><span class="text-success">//Your text (array with strings) - <span class="text-danger">required</span></span></small></span>
+          </p>
+          <p class="m-0">
+           }).<span class="text-primary">init</span>();
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 d-none d-md-block mb-5 mt-md-5">
+        <p id="para7" class="font-weight-bolder"></p>
+        <p id="para8" class="font-weight-bolder"></p>
+        <p id="para9" class="font-weight-bolder"></p>
+        <p id="para10" class="font-weight-bolder"></p>
+        <p id="para11" class="font-weight-bolder"></p>
+        <p id="para12" class="font-weight-bolder"></p>
+        <p id="para13" class="font-weight-bolder"></p>
+        <p id="para14" class="font-weight-bolder"></p>
+        <p id="para15" class="font-weight-bolder"></p>
+        <p id="para16" class="font-weight-bolder"></p>
+      </div>
+      <br>
+
+      <div class="col-md-8 mb-5">
+        <h2 id="options"></h2>
+        <ul>
+          <li><b>id:</b> Your HTML element id (string) - <span class="text-danger">`REQUIRED`</span></li>
+          <li><b>typeText:</b> Your text (array with strings) - <span class="text-danger">`REQUIRED`</span></li>
+          <li><b>textColor:</b> Color of Your text (string) *default('#000')</li>
+          <li><b>typeSpeed:</b> Interval between each character (nummber) *default(100ms)</li>
+          <li><b>typeRandom:</b> Random interval between each character (boolean) *default(false)</li>
+          <li><b>typeDelay:</b> Delay interval between typing two texts (number) *default(100ms)</li>
+          <li><b>cursor:</b> Character for cursor (string) *default('|')</li>
+          <li><b>cursorColor:</b> Color of the cursor (string) *default('#000')</li>
+          <li><b>cursorSpeed:</b> Interval of the cursor blinks (number) *default(300ms)</li>
+          <li><b>deleteSpeed:</b> Interval of deleting text (number) *default(50ms)</li>
+          <li><b>deleteDelay:</b> Delay interval before deleting text (number) *default(2000ms)</li>
+          <li><b>typeInfinity:</b> Autotyping infinity or only one cycle (boolean) *default(true)</li>
+          <li><b>callBack:</b> Callback function - triggered after every typing cycle (object) *default(null)
+            <ul>
+              <li><i><b>counter:</b> Every typing cycle counter is reduced by 1, after 0 it is reset (number)</i></li>
+              <li><i><b>method: function(counter){...}</b> Your function (function)</i></li>
+            </ul>
+          </li>
+        </ul>
+        <p><span class="text-danger">*</span> If you set a value for a color property to an empty string, the element will inherit the style from the parent element.</p>
+        <hr class="my-4">
+        <h3 id="example"></h3>
+        <div class="options p-3 bg-light">
+          <p class="m-0">
+            <span class="text-danger">const</span> myText = <span class="text-warning">new</span> AutoTyping({
           </p>
           <p class="m-0">
            <span class="pl-4">id: 'example', <small><span class="text-success">//Your HTML element id without # (string) - <span class="text-danger">required</span></span></small></span>
@@ -163,24 +217,32 @@
           </p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-none mb-5 mt-md-5">
-        <p id="para7" class="font-weight-bolder"></p>
-        <p id="para8" class="font-weight-bolder"></p>
-        <p id="para9" class="font-weight-bolder"></p>
-        <p id="para10" class="font-weight-bolder"></p>
-        <p id="para11" class="font-weight-bolder"></p>
-        <p id="para12" class="font-weight-bolder"></p>
-        <p id="para13" class="font-weight-bolder"></p>
-        <p id="para14" class="font-weight-bolder"></p>
-        <p id="para15" class="font-weight-bolder"></p>
-        <p id="para16" class="font-weight-bolder"></p>
-        <p id="para17" class="font-weight-bolder"></p>
-        <p id="para18" class="font-weight-bolder"></p>
-        <p id="para19" class="font-weight-bolder"></p>
-        <p id="para20" class="font-weight-bolder"></p>
-        <p id="para21" class="font-weight-bolder"></p>
-        <p id="para22" class="font-weight-bolder"></p>
-        <p id="para23" class="font-weight-bolder"></p>
+      <div class="col-md-4 mb-5 mt-md-5">
+        <p id="para17" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para18" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para19" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para20" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para21" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para22" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para23" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para24" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para25" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para26" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para27" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para28" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para29" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para30" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para31" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para32" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para33" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para34" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para35" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para36" class="font-weight-bolder"></p>
+        <p id="para37" class="font-weight-bolder"></p>
+        <p id="para38" class="font-weight-bolder"></p>
+        <p id="para39" class="font-weight-bolder"></p>
+        <p id="para40" class="font-weight-bolder"></p>
+        <p id="para41" class="font-weight-bolder"></p>
       </div>
     </div>
 
@@ -189,11 +251,6 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark text-center text-secondary">
     <div class="container">
-      <a href="https://github.com/igor-stojcic" target="_blank" data-toggle="tooltip" data-placement="top" title="Github" class="px-1 text-secondary"><i class="fab fa-github-square"></i></a>
-        <a href="https://www.linkedin.com/in/igor-stojcic-2244221a8" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn" class="px-1 text-secondary"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/elf_coder" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram" class="px-1 text-secondary"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/igor.stojcic.357" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook" class="px-1 text-secondary"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://www.pinterest.com/elf_coder/boards" target="_blank" data-toggle="tooltip" data-placement="top" title="Pinterest" class="px-1 text-secondary"><i class="fab fa-pinterest-p"></i></a>
         <p class="mb-0"><small>&copy; <script>document.write(new Date().getFullYear());</script> <a href="https://igor.smarty.rs" target="_blank" class="text-decoration-none text-warning">elf.coder</a> | All rights reserved</small></p>
     </div>
   </footer>
@@ -284,7 +341,6 @@
       typeRandom: false,
       typeDelay: 200,
       cursor: '|',
-      cursorColor: '',
       cursorSpeed: 200,
       deleteSpeed: 10,
       deleteDelay: 3500,
@@ -327,6 +383,27 @@
       textColor: '#28a745',
       cursor: '<i class="fas fa-wrench" style="font-size: .8em;"></i>',
       cursorColor: '#6c757d'
+    }).init();
+
+    new AutoTyping({
+      id: 'options',
+      typeText: ['Options'],
+      textColor: '#6885e3',
+      cursor: '<i class="fas fa-filter" style="font-size: .7em;"></i>',
+      cursorColor: '#fc0000'
+    }).init();
+
+    new AutoTyping({
+      id: 'example',
+      typeText: ['Example'],
+      textColor: '#ff5500',
+      typeSpeed: 50,
+      typeDelay: 200,
+      cursor: '<i class="fas fa-arrow-down" style="font-size: .7em;"></i>',
+      cursorSpeed: 200,
+      deleteSpeed: 50,
+      deleteDelay: 2000,
+      typeInfinity: true
     }).init();
 
     new AutoTyping({
@@ -618,6 +695,240 @@
       cursorSpeed: 150,
       deleteSpeed: 50,
       deleteDelay: 1500,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para24',
+      typeText: ['Best type writer library'],
+      textColor: '#A67D03',
+      typeSpeed: 50,
+      typeRandom: false,
+      typeDelay: 400,
+      cursorSpeed: 500,
+      deleteSpeed: 150,
+      deleteDelay: 2000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para25',
+      typeText: ['Best type writer library'],
+      textColor: '#F24535',
+      typeSpeed: 150,
+      typeRandom: false,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 100,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para26',
+      typeText: ['Best type writer library'],
+      textColor: '#0D0D0D',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 50,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para27',
+      typeText: ['Best type writer library'],
+      textColor: '#F62BCC',
+      typeSpeed: 150,
+      typeRandom: false,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 10,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para28',
+      typeText: ['Best type writer library'],
+      textColor: '#3A758C',
+      typeSpeed: 30,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para29',
+      typeText: ['Best type writer library'],
+      textColor: '#62CDD9',
+      typeSpeed: 250,
+      typeRandom: false,
+      typeDelay: 250,
+      cursorSpeed: 250,
+      deleteSpeed: 250,
+      deleteDelay: 2500,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para30',
+      typeText: ['Best type writer library'],
+      textColor: '#F29E38',
+      typeSpeed: 90,
+      typeRandom: true,
+      typeDelay: 100,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para31',
+      typeText: ['Best type writer library'],
+      textColor: '#043540',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 1000,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para32',
+      typeText: ['Best type writer library'],
+      textColor: '#05AFF2',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 100,
+      deleteSpeed: 160,
+      deleteDelay: 1800,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para33',
+      typeText: ['Best type writer library'],
+      textColor: '#D9C091',
+      typeSpeed: 100,
+      typeRandom: false,
+      typeDelay: 100,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 2000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para34',
+      typeText: ['Best type writer library'],
+      textColor: '#1A1D45',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true,
+    }).init();
+
+    new AutoTyping({
+      id: 'para35',
+      typeText: ['Best type writer library'],
+      textColor: '#ED1F17',
+      typeSpeed: 100,
+      typeRandom: false,
+      typeDelay: 300,
+      cursorSpeed: 300,
+      deleteSpeed: 100,
+      deleteDelay: 2000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para36',
+      typeText: ['Best type writer library'],
+      textColor: '#F4BC2B',
+      typeSpeed: 100,
+      typeRandom: false,
+      typeDelay: 100,
+      cursorSpeed: 150,
+      deleteSpeed: 50,
+      deleteDelay: 1500,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para37',
+      typeText: ['Best type writer library'],
+      textColor: '#B0B0EB',
+      typeSpeed: 70,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para38',
+      typeText: ['Best type writer library'],
+      textColor: '#F23D7F',
+      typeSpeed: 150,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para39',
+      typeText: ['Best type writer library'],
+      textColor: '#0ABF04',
+      typeSpeed: 90,
+      typeRandom: false,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 2000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para40',
+      typeText: ['Best type writer library'],
+      textColor: '#F2D022',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para41',
+      typeText: ['Best type writer library'],
+      textColor: '#3A758C',
+      typeSpeed: 30,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
       typeInfinity: true
     }).init();
 
