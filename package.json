@@ -1,0 +1,35 @@
+{
+  "name": "autotyping",
+  "version": "1.1.1",
+  "description": "This is a JavaScript library that allows you to easily and quickly implement a type writer effect on your website or application.",
+  "main": "dist/AutoTyping.min.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor-stojcic/AutoTyping.js.git"
+  },
+  "keywords": [
+    "autotyping",
+    "texttyping",
+    "textwriting",
+    "typewriter",
+    "typing",
+    "cursor",
+    "blinking",
+    "terminal-like"
+  ],
+  "author": "Igor Stojcic <igor@smarty.rs>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igor-stojcic/AutoTyping.js/issues"
+  },
+  "homepage": "https://github.com/igor-stojcic/AutoTyping.js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

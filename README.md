@@ -16,10 +16,10 @@ There are many options available for you that you may or may not include, the Ja
 
 Just clone or download the zip of this GitHub repository
 
-or via [npm](https://autotyping.smarty.rs):
+or via [npm](https://www.npmjs.com/package/autotyping):
 
 ~~~bash
-# $ npm install --save AutoTyping
+npm install --save autotyping
 ~~~
 
 ### Setup
@@ -61,6 +61,7 @@ const myText = new AutoTyping({
 > If you set a value for a color property to an empty string, the element will inherit the style from the parent element.
 
 ----
+
 ### Example
 ~~~javascript
 const myText = new AutoTyping({
