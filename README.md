@@ -12,7 +12,7 @@ There are many options available for you that you may or may not include, the Ja
 
 ----
 
-### Instalation
+### Installation
 
 Just clone or download the zip of this GitHub repository
 
