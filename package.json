@@ -25,11 +25,5 @@
   "bugs": {
     "url": "https://github.com/igor-stojcic/AutoTyping.js/issues"
   },
-  "homepage": "https://github.com/igor-stojcic/AutoTyping.js#readme",
-  "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "babel-loader": "^8.1.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
-  }
+  "homepage": "https://github.com/igor-stojcic/AutoTyping.js#readme"
 }
