@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/autotyping.svg)](https://badge.fury.io/js/autotyping)
 
-![https://images.unsplash.com/photo-1560092056-5669e776fc68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80](cover.jpg)
+![https://unsplash.com/photos/6rkJD0Uxois](cover.jpg)
 
 This is a JavaScript library that allows you to easily and quickly implement a type writer effect on your website or application.
 
