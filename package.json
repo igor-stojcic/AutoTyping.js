@@ -1,6 +1,6 @@
 {
   "name": "autotyping",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "This is a JavaScript library that allows you to easily and quickly implement a type writer effect on your website or application.",
   "main": "dist/AutoTyping.min.js",
   "scripts": {
