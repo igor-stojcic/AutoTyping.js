@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/igor-stojcic/autotyping.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "keywords": [
     "autotyping",
     "texttyping",
