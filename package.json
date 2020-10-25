@@ -6,6 +6,10 @@
   "scripts": {
     "build": "webpack --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor-stojcic/AutoTyping.js.git"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
