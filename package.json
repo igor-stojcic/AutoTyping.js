@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/igor-stojcic/AutoTyping.js/issues"
   },
-  "homepage": "https://github.com/igor-stojcic/AutoTyping.js#readme"
+  "homepage": "https://github.com/igor-stojcic/AutoTyping.js#readme",
+  "dependencies": {}
 }
