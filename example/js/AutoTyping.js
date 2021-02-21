@@ -23,7 +23,7 @@
 */
 
 /*!
- * AutoTyping.js
+ * AutoTyping.js 
  *
  * Copyright © 2021 Igor Stojcic (https://igor.smarty.rs) | MIT license
  * https://github.com/igor-stojcic/AutoTyping
