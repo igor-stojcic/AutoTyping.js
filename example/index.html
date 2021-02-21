@@ -52,13 +52,14 @@
         <hr>
         <p>This is a JavaScript library that allows you to easily and quickly implement a type writer effect on your website or application.</p>
         <p>There are many options available for you that you may or may not include, the JavaScript AutoTyping library will definitely work for you.</p>
+        <p>Lightweight. Only 4.06kb - minified version.</p>
       </div>
       <div class="col-md-4 mb-5">
         <h2><small id="releases"></small></h2>
         <hr>
         <address>
-          <strong><i class="fas fa-terminal"></i> Version 1.1.2</strong>
-          <br>on August 17, 2020
+          <strong><i class="fas fa-terminal"></i> Version 1.2.6</strong>
+          <br>on February 22, 2021
           <br>
         </address>
         <address>
@@ -155,8 +156,25 @@
               <li><i><b>method: function(counter){...}</b> Your function (function)</i></li>
             </ul>
           </li>
+          <li class="mb-0 text-danger" style="list-style-type: none;font-weight: 700;">New!</li>
+          <li><b>textDeleteOptions:</b> deleting a text to a specific character, and typing a new sequel (object) *default(null)
+            <ul>
+              <li><i><b>(index of strings in "typeText" Array - Example *0 : {...}*):</b> (object)</i>
+                <ul>
+                  <li><i><b>deleteToChar:</b> index of the characters of the selected string, where the writing new part of text beginning (number)</i></li>
+                  <li><i><b>continueThis:</b> a new piece of text to be written (string)</i></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
         <p><span class="text-danger">*</span> If you set a value for a color property to an empty string, the element will inherit the style from the parent element.</p>
+        <h2 id="methods" class="mt-5"></h2>
+        <ul class="mb-5">
+          <li><b>init()</b> - start AutoTyping</li>
+          <li class="mb-0 text-danger" style="list-style-type: none;font-weight: 700;">New!</li>
+          <li><b>stop()</b> - stop AutoTyping after last triggered cycle</li>
+        </ul>
         <hr class="my-4">
         <h3 id="example"></h3>
         <div class="options p-3 bg-light">
@@ -197,16 +215,34 @@
            <span class="pl-4">deleteDelay: 2000,  <small><span class="text-success">//Delay interval before deleting text (number) *default(2000ms)</span></small></span>
           </p>
           <p class="m-0">
-           <span class="pl-4">typeInfinity: true  <small><span class="text-success">//Autotyping infinity or only one cycle (boolean) *default(true)</span></small></span>
+           <span class="pl-4">typeInfinity: true,  <small><span class="text-success">//Autotyping infinity or only one cycle (boolean) *default(true)</span></small></span>
           </p>
           <p class="m-0">
-            <span class="pl-4">callBack: {</span><small><span class="text-success">//Callback function - triggered after every typing cycle (object) *default(null)</span></small>
+            <span class="pl-4">callBack: { </span><small><span class="text-success">//Callback function - triggered after every typing cycle (object) *default(null)</span></small>
           </p>
           <p class="m-0">
-            <span class="pl-5">counter: 4 </span><small><span class="text-success">//Every typing cycle counter is reduced by 1, after 0 it is reset (number)</span></small>
+            <span class="pl-5">counter: 4, </span><small><span class="text-success">//Every typing cycle counter is reduced by 1, after 0 it is reset (number)</span></small>
           </p>
           <p class="m-0">
             <span class="pl-5"><span class="text-primary">method</span>: <span class="text-danger">function</span>(<span class="text-warning">counter</span>){...} </span><small><span class="text-success">//Your function (function)</span></small>
+          </p>
+          <p class="m-0">
+            <span class="pl-4">},</span>
+          </p>
+          <p class="m-0">
+            <span class="pl-4">textDeleteOptions: { </span><small><span class="text-success">//deleting a text to a specific character, and typing a new sequel (object) *default(null)</span></small>
+          </p>
+          <p class="m-0">
+            <span class="pl-5">0: { </span><small><span class="text-success">//index of strings in "typeText" Array (key-number : value-object)</span></small>
+          </p>
+          <p class="m-0">
+            <span class="pl-5"><span style="visibility:hidden;">hid</span> deleteToChar: 2, </span><small><span class="text-success">//index of the characters of the selected string, where the writing new part of text beginning (number)</span></small>
+          </p>
+          <p class="m-0">
+            <span class="pl-5"><span style="visibility:hidden;">hid</span> continueThis: "treme" </span><small><span class="text-success">//a new piece of text to be written (string)</span></small>
+          </p>
+          <p class="m-0">
+            <span class="pl-5">},</span>
           </p>
           <p class="m-0">
             <span class="pl-4">}</span>
@@ -236,6 +272,14 @@
         <p id="para33" class="font-weight-bolder d-none d-md-block"></p>
         <p id="para34" class="font-weight-bolder d-none d-md-block"></p>
         <p id="para35" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para42" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para43" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para44" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para45" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para46" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para47" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para48" class="font-weight-bolder d-none d-md-block"></p>
+        <p id="para49" class="font-weight-bolder d-none d-md-block"></p>
         <p id="para36" class="font-weight-bolder"></p>
         <p id="para37" class="font-weight-bolder"></p>
         <p id="para38" class="font-weight-bolder"></p>
@@ -262,7 +306,7 @@
 
   <script>
 
-    new AutoTyping({
+    let auto = new AutoTyping({
       id: 'brand',
       typeText: ['AutoTyping'],
       textColor: '',
@@ -272,9 +316,15 @@
       cursor: '',
       deleteSpeed: 100,
       deleteDelay: 2500,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 4,
+          continueThis : 'Typing'
+        }
+      }
     }).init();
-
+    
     new AutoTyping({
       id: 'mit',
       typeText: ['MIT License'],
@@ -328,6 +378,16 @@
               break;
           }
         }
+      },
+      textDeleteOptions : {
+        1 : {
+          deleteToChar : 5,
+          continueThis : 'for You'
+        },
+        2 : {
+          deleteToChar : 5,
+          continueThis : 'smart'
+        }
       }
     }).init();
 
@@ -357,7 +417,13 @@
       cursorSpeed: 200,
       deleteSpeed: 50,
       deleteDelay: 2000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 5,
+          continueThis : ' is it for'
+        }
+      }
     }).init();
     
     new AutoTyping({
@@ -372,7 +438,13 @@
       typeText: ['Instalation'],
       textColor: '#e83e8c',
       cursor: '<i class="fas fa-bolt" style="font-size: .8em;"></i>',
-      cursorColor: '#17a2b8'
+      cursorColor: '#17a2b8',
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 6,
+          continueThis : 'lation'
+        }
+      }
     }).init();
 
     new AutoTyping({
@@ -386,6 +458,15 @@
     new AutoTyping({
       id: 'options',
       typeText: ['Options'],
+      textColor: '#6885e3',
+      cursor: '<i class="fas fa-filter" style="font-size: .7em;"></i>',
+      cursorColor: '#fc0000'
+    }).init();
+
+    new AutoTyping({
+      id: 'methods',
+      typeText: ['Methods'],
+      typeSpeed: 110,
       textColor: '#6885e3',
       cursor: '<i class="fas fa-filter" style="font-size: .7em;"></i>',
       cursorColor: '#fc0000'
@@ -415,6 +496,12 @@
       deleteSpeed: 150,
       deleteDelay: 1000,
       typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -440,7 +527,13 @@
       cursorSpeed: 150,
       deleteSpeed: 50,
       deleteDelay: 1500,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -466,7 +559,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -492,7 +591,13 @@
       cursorSpeed: 500,
       deleteSpeed: 150,
       deleteDelay: 2000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -518,7 +623,13 @@
       cursorSpeed: 200,
       deleteSpeed: 50,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -544,7 +655,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -570,7 +687,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -596,7 +719,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -628,7 +757,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 2000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -654,7 +789,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -680,7 +821,13 @@
       cursorSpeed: 300,
       deleteSpeed: 100,
       deleteDelay: 2000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -706,7 +853,13 @@
       cursorSpeed: 500,
       deleteSpeed: 150,
       deleteDelay: 2000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -732,7 +885,13 @@
       cursorSpeed: 200,
       deleteSpeed: 50,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -758,7 +917,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -784,7 +949,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -810,7 +981,13 @@
       cursorSpeed: 100,
       deleteSpeed: 160,
       deleteDelay: 1800,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -837,6 +1014,12 @@
       deleteSpeed: 150,
       deleteDelay: 1000,
       typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -862,7 +1045,13 @@
       cursorSpeed: 150,
       deleteSpeed: 50,
       deleteDelay: 1500,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -888,7 +1077,13 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
-      typeInfinity: true
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
     new AutoTyping({
@@ -927,7 +1122,141 @@
       cursorSpeed: 200,
       deleteSpeed: 150,
       deleteDelay: 1000,
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
+    }).init();
+
+    new AutoTyping({
+      id: 'para42',
+      typeText: ['Best type writer library'],
+      textColor: '#1A1D45',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
+    }).init();
+
+    new AutoTyping({
+      id: 'para43',
+      typeText: ['Best type writer library'],
+      textColor: '#ED1F17',
+      typeSpeed: 100,
+      typeRandom: false,
+      typeDelay: 300,
+      cursorSpeed: 300,
+      deleteSpeed: 100,
+      deleteDelay: 2000,
       typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para44',
+      typeText: ['Best type writer library'],
+      textColor: '#B0B0EB',
+      typeSpeed: 70,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para45',
+      typeText: ['Best type writer library'],
+      textColor: '#F23D7F',
+      typeSpeed: 150,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
+    }).init();
+
+    new AutoTyping({
+      id: 'para46',
+      typeText: ['Best type writer library'],
+      textColor: '#0ABF04',
+      typeSpeed: 90,
+      typeRandom: false,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 2000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para47',
+      typeText: ['Best type writer library'],
+      textColor: '#F2D022',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true
+    }).init();
+
+    new AutoTyping({
+      id: 'para48',
+      typeText: ['Best type writer library'],
+      textColor: '#3A758C',
+      typeSpeed: 30,
+      typeRandom: true,
+      typeDelay: 300,
+      cursorSpeed: 200,
+      deleteSpeed: 150,
+      deleteDelay: 1000,
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
+    }).init();
+
+    new AutoTyping({
+      id: 'para49',
+      typeText: ['Best type writer library'],
+      textColor: '#3A758C',
+      typeSpeed: 50,
+      typeRandom: true,
+      typeDelay: 100,
+      cursorSpeed: 100,
+      deleteSpeed: 250,
+      deleteDelay: 800,
+      typeInfinity: true,
+      textDeleteOptions : {
+        0 : {
+          deleteToChar : 17,
+          continueThis : 'effect'
+        },
+      }
     }).init();
 
   </script>
